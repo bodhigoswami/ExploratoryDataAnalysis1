@@ -5,7 +5,7 @@ hdp_data <- read_delim("~/My R Work/R Studio Default/data/Individual household e
 library(lubridate)
 hdp_data$Date<-dmy(hdp_data$Date)
 my_data<-rbind(subset(hdp_data, Date == c("2007-02-01")),
-                subset(hdp_data, Date == c("2007-02-01")))#Only two days required
+                subset(hdp_data, Date == c("2007-02-02")))#Only two days required
 my_data$Global_active_power<-as.numeric(my_data$Global_active_power)
 png(filename = "plot1.png")
 hist(my_data$Global_active_power, col = "red", main = "Global Active Power",
